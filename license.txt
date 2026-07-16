@@ -1,0 +1,136 @@
+LABEL BLEND END USER LICENSE AGREEMENT (EULA)
+
+Version: 1.1.0
+Effective Date: July 2026
+
+IMPORTANT
+
+PLEASE READ THIS END USER LICENSE AGREEMENT ("AGREEMENT") CAREFULLY BEFORE INSTALLING OR USING LABEL BLEND.
+
+BY INSTALLING, COPYING, OR USING THIS SOFTWARE, YOU AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT.
+
+IF YOU DO NOT AGREE TO THESE TERMS, DO NOT INSTALL OR USE THE SOFTWARE.
+
+1. Definitions
+Software means the Label Blend desktop application, including all updates, documentation, plugins, and related files.
+Company means VermaAgentix.
+User means the individual or organization using the Software.
+
+2. License Grant
+VermaAgentix grants you a limited, non-exclusive, non-transferable, revocable license to install and use Label Blend solely for your personal, educational, research, or commercial projects, subject to this Agreement.
+
+You may:
+
+Install the software on your own computers.
+Create image annotations.
+Generate synthetic datasets.
+Export annotation files.
+Use generated datasets for machine learning and computer vision projects.
+3. Restrictions
+
+You may NOT:
+
+Sell the software.
+Redistribute the installer.
+Reverse engineer the software except where permitted by applicable law.
+Modify or remove copyright notices.
+Rent, lease, sublicense, or resell the software.
+Use the software for unlawful activities.
+
+4. Ownership
+
+Label Blend is licensed, not sold.
+All intellectual property rights remain the exclusive property of VermaAgentix.
+This Agreement does not transfer ownership of the software.
+
+5. User Data
+
+Label Blend primarily processes files stored on your computer.
+Unless explicitly enabled by you, the software does not upload your images, annotations, or datasets to VermaAgentix servers.
+You remain the owner of all datasets and images you create or process.
+
+6. Artificial Intelligence Features
+
+Certain features may use Artificial Intelligence technologies for:
+
+Image processing
+Annotation assistance
+Dataset generation
+Object labeling
+Segmentation
+
+AI-generated results are provided for assistance only.
+Users are responsible for verifying the accuracy of generated annotations before using them in production or research.
+
+7. Third-Party Components
+
+The Software may include or depend on open-source libraries licensed under their respective licenses.
+Those licenses remain applicable to their respective components.
+
+8. Updates
+
+VermaAgentix may provide software updates, bug fixes, security patches, or feature enhancements.
+You are not obligated to install updates, although some features may require a newer version.
+
+9. Disclaimer of Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND.
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, VERMAAGENTIX DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO:
+
+MERCHANTABILITY
+FITNESS FOR A PARTICULAR PURPOSE
+NON-INFRINGEMENT
+ACCURACY
+RELIABILITY
+10. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, VERMAAGENTIX SHALL NOT BE LIABLE FOR ANY:
+
+LOSS OF DATA
+LOSS OF PROFITS
+BUSINESS INTERRUPTION
+INDIRECT DAMAGES
+INCIDENTAL DAMAGES
+CONSEQUENTIAL DAMAGES
+
+ARISING FROM THE USE OR INABILITY TO USE THE SOFTWARE.
+
+11. Export Compliance
+
+You agree to comply with all applicable export control laws and regulations.
+
+12. Termination
+
+This Agreement automatically terminates if you violate any of its terms.
+
+Upon termination you must:
+
+Stop using the software.
+Delete all installed copies.
+13. Privacy
+
+Label Blend respects user privacy.
+
+The software does not intentionally collect personal information unless explicitly stated or required for optional online services.
+
+Please refer to the Privacy Policy for additional information.
+
+14. Governing Law
+
+This Agreement shall be governed by the laws applicable in the jurisdiction where VermaAgentix operates, without regard to conflict of law principles.
+
+15. Contact
+
+Email:
+vermaagentix@gmail.com
+
+16. Copyright
+
+© 2026 VermaAgentix.
+
+All Rights Reserved.
+
+Label Blend and the VermaAgentix logo are trademarks of VermaAgentix.
+
+Unauthorized reproduction or distribution is prohibited.
