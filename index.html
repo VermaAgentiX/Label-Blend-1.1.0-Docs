@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Label Blend — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg:#f5f6f8;
+    --surface:#ffffff;
+    --sidebar:#fbfbfc;
+    --border:#e3e5ea;
+    --text:#12141c;
+    --text-muted:#5b6472;
+    --text-faint:#8a93a3;
+    --accent:#0d9488;
+    --accent-dark:#0f766e;
+    --accent-soft:#e3f7f4;
+    --radius:14px;
+    --maxw:760px;
+    --sidebar-w:272px;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:16px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:var(--accent-dark); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  strong{ color:var(--text); font-weight:600; }
+
+  /* ---------- scroll progress ---------- */
+  .progress{
+    position:fixed; top:0; left:0; height:3px; width:0%;
+    background:var(--accent);
+    z-index:1000;
+    transition:width .1s linear;
+  }
+
+  /* ---------- layout shell ---------- */
+  .shell{
+    display:flex;
+    max-width:1180px;
+    margin:0 auto;
+    min-height:100vh;
+    align-items:flex-start;
+  }
+
+  /* ---------- sidebar ---------- */
+  .sidebar{
+    width:var(--sidebar-w);
+    flex-shrink:0;
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow-y:auto;
+    padding:40px 28px 40px 32px;
+    border-right:1px solid var(--border);
+    background:var(--sidebar);
+  }
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:6px;
+  }
+
+  .brand-mark{
+    width:30px; height:30px;
+    border-radius:8px;
+    background:var(--text);
+    position:relative;
+    flex-shrink:0;
+  }
+  .brand-mark::before,
+  .brand-mark::after{
+    content:"";
+    position:absolute;
+    border:1.5px solid var(--accent);
+    border-radius:4px;
+  }
+  .brand-mark::before{ inset:6px 9px 12px 6px; }
+  .brand-mark::after{ inset:12px 6px 6px 10px; border-color:#f4b942; }
+
+  .brand-name{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:17px;
+    letter-spacing:-0.01em;
+  }
+
+  .brand-tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    color:var(--text-faint);
+    margin-bottom:34px;
+    padding-left:2px;
+  }
+
+  .toc-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--text-faint);
+    margin-bottom:14px;
+  }
+
+  .toc{ list-style:none; }
+  .toc li{ margin:0; }
+  .toc a{
+    display:flex;
+    gap:10px;
+    align-items:baseline;
+    padding:7px 10px;
+    margin-bottom:2px;
+    border-radius:8px;
+    color:var(--text-muted);
+    font-size:13.5px;
+    text-decoration:none;
+    transition:background .15s ease, color .15s ease;
+  }
+  .toc a:hover{ background:#eef2f2; color:var(--text); }
+  .toc a.active{
+    background:var(--accent-soft);
+    color:var(--accent-dark);
+    font-weight:600;
+  }
+  .toc .idx{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    color:var(--text-faint);
+    min-width:18px;
+  }
+  .toc a.active .idx{ color:var(--accent); }
+
+  .sidebar-footer{
+    margin-top:36px;
+    padding-top:20px;
+    border-top:1px solid var(--border);
+    font-size:12.5px;
+    color:var(--text-faint);
+    font-family:'JetBrains Mono',monospace;
+    line-height:1.6;
+  }
+
+  /* ---------- mobile toc toggle ---------- */
+  .mobile-toc-toggle{ display:none; }
+
+  /* ---------- main content ---------- */
+  main{
+    flex:1;
+    min-width:0;
+    padding:64px 48px 100px;
+  }
+
+  .content{ max-width:var(--maxw); margin:0 auto; }
+
+  /* hero / bounding-box treatment */
+  .hero{
+    position:relative;
+    padding:38px 34px 34px;
+    margin-bottom:52px;
+  }
+  .corner{
+    position:absolute;
+    width:22px; height:22px;
+    border:2px solid var(--accent);
+  }
+  .corner.tl{ top:0; left:0; border-right:none; border-bottom:none; }
+  .corner.tr{ top:0; right:0; border-left:none; border-bottom:none; }
+  .corner.bl{ bottom:0; left:0; border-right:none; border-top:none; }
+  .corner.br{ bottom:0; right:0; border-left:none; border-top:none; }
+
+  .obj-tag{
+    position:absolute;
+    top:-13px; left:24px;
+    background:var(--text);
+    color:#fff;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    padding:4px 10px;
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    letter-spacing:.01em;
+  }
+  .obj-tag .dot{
+    width:6px; height:6px;
+    border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 0 3px rgba(13,148,136,.25);
+  }
+
+  h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:clamp(32px,4vw,44px);
+    letter-spacing:-0.02em;
+    margin-top:14px;
+    margin-bottom:10px;
+  }
+
+  .subtitle{
+    color:var(--text-muted);
+    font-size:15px;
+  }
+  .subtitle .updated{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    color:var(--text-faint);
+    display:inline-block;
+    margin-top:8px;
+  }
+
+  .lede{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-left:3px solid var(--accent);
+    border-radius:0 var(--radius) var(--radius) 0;
+    padding:22px 26px;
+    margin-bottom:52px;
+  }
+  .lede p{ margin:0; color:var(--text); }
+  .lede .kicker{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--accent-dark);
+    display:block;
+    margin-bottom:8px;
+  }
+
+  section{
+    margin-bottom:46px;
+    scroll-margin-top:32px;
+  }
+
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:16px;
+    border-bottom:1px solid var(--border);
+    padding-bottom:10px;
+  }
+  .sec-idx{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:2px 8px;
+    border-radius:5px;
+    flex-shrink:0;
+  }
+  h2{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:21px;
+    letter-spacing:-0.01em;
+    color:var(--text);
+  }
+
+  p{ margin-bottom:14px; color:var(--text); }
+  section > p:last-child{ margin-bottom:0; }
+
+  ul{ margin:14px 0 14px 0; padding-left:0; list-style:none; }
+  li{
+    margin:9px 0;
+    padding-left:22px;
+    position:relative;
+    color:var(--text);
+  }
+  li::before{
+    content:"";
+    position:absolute;
+    left:0; top:9px;
+    width:8px; height:8px;
+    border:1.5px solid var(--accent);
+    border-radius:2px;
+  }
+
+  .not-collected{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px 20px;
+    margin:14px 0 4px;
+  }
+  .not-collected li::before{
+    border-color:#c7cbd3;
+  }
+  .not-collected li{ color:var(--text-muted); font-size:14.5px; }
+
+  .callout{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:18px 22px;
+    margin-top:16px;
+    font-size:14.5px;
+    color:var(--text-muted);
+  }
+  .callout strong{ color:var(--text); }
+
+  .contact-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:26px 28px;
+  }
+  .contact-card .role{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    color:var(--text-faint);
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    margin-bottom:6px;
+  }
+  .contact-card .name{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:18px;
+    margin-bottom:10px;
+  }
+  .contact-card a{ font-family:'JetBrains Mono',monospace; font-size:14.5px; }
+
+  footer{
+    margin-top:60px;
+    padding-top:24px;
+    border-top:1px solid var(--border);
+    color:var(--text-faint);
+    font-size:13px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+    font-family:'JetBrains Mono',monospace;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .sidebar{ display:none; }
+    main{ padding:24px 22px 80px; }
+
+    .mobile-toc-toggle{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      width:100%;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:12px 16px;
+      font-family:'JetBrains Mono',monospace;
+      font-size:13px;
+      color:var(--text-muted);
+      margin-bottom:28px;
+      cursor:pointer;
+    }
+    .mobile-toc-toggle .chev{ transition:transform .2s ease; }
+    .mobile-toc-toggle.open .chev{ transform:rotate(180deg); }
+
+    .mobile-toc-panel{
+      display:none;
+      flex-direction:column;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:10px;
+      margin:-18px 0 28px;
+    }
+    .mobile-toc-panel.open{ display:flex; }
+    .mobile-toc-panel a{
+      padding:9px 12px;
+      border-radius:7px;
+      color:var(--text-muted);
+      font-size:14px;
+      display:flex;
+      gap:10px;
+    }
+    .mobile-toc-panel a .idx{
+      font-family:'JetBrains Mono',monospace;
+      font-size:11px;
+      color:var(--text-faint);
+    }
+
+    .hero{ padding:30px 20px 26px; }
+    .not-collected{ grid-template-columns:1fr; }
+  }
+
+  @media print{
+    .sidebar,.progress,.mobile-toc-toggle{ display:none; }
+    main{ padding:0; }
+    body{ background:#fff; }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    *{ transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<div class="shell">
+
+  <!-- Sidebar / Table of Contents -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div class="brand-name">Label Blend</div>
+    </div>
+    <div class="brand-tag">privacy_policy.md</div>
+
+    <div class="toc-label">Contents</div>
+    <ul class="toc" id="toc">
+      <li><a href="#introduction"><span class="idx">01</span>Introduction</a></li>
+      <li><a href="#information"><span class="idx">02</span>Information We Collect</a></li>
+      <li><a href="#datasets"><span class="idx">03</span>Images &amp; Datasets</a></li>
+      <li><a href="#ai"><span class="idx">04</span>AI-Assisted Annotation</a></li>
+      <li><a href="#connectivity"><span class="idx">05</span>Internet Connectivity</a></li>
+      <li><a href="#storage"><span class="idx">06</span>Data Storage</a></li>
+      <li><a href="#third-party"><span class="idx">07</span>Third-Party Components</a></li>
+      <li><a href="#children"><span class="idx">08</span>Children's Privacy</a></li>
+      <li><a href="#security"><span class="idx">09</span>Security</a></li>
+      <li><a href="#changes"><span class="idx">10</span>Changes to This Policy</a></li>
+      <li><a href="#contact"><span class="idx">11</span>Contact</a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      updated: 2026-07<br>
+      doc_id: label-blend-privacy-v1
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main>
+    <div class="content">
+
+      <button class="mobile-toc-toggle" id="mobileTocToggle">
+        <span>Contents</span>
+        <span class="chev">▾</span>
+      </button>
+      <nav class="mobile-toc-panel" id="mobileTocPanel">
+        <a href="#introduction"><span class="idx">01</span>Introduction</a>
+        <a href="#information"><span class="idx">02</span>Information We Collect</a>
+        <a href="#datasets"><span class="idx">03</span>Images &amp; Datasets</a>
+        <a href="#ai"><span class="idx">04</span>AI-Assisted Annotation</a>
+        <a href="#connectivity"><span class="idx">05</span>Internet Connectivity</a>
+        <a href="#storage"><span class="idx">06</span>Data Storage</a>
+        <a href="#third-party"><span class="idx">07</span>Third-Party Components</a>
+        <a href="#children"><span class="idx">08</span>Children's Privacy</a>
+        <a href="#security"><span class="idx">09</span>Security</a>
+        <a href="#changes"><span class="idx">10</span>Changes to This Policy</a>
+        <a href="#contact"><span class="idx">11</span>Contact</a>
+      </nav>
+
+      <div class="hero">
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+        <div class="obj-tag"><span class="dot"></span>doc: privacy-policy</div>
+        <h1>Label Blend</h1>
+        <div class="subtitle">
+          Privacy Policy for the Label Blend annotation &amp; synthetic dataset studio
+          <br>
+          <span class="updated">Last updated · July 2026</span>
+        </div>
+      </div>
+
+      <div class="lede">
+        <span class="kicker">In short</span>
+        <p>
+          Label Blend is built as an offline-first desktop application. Your images, datasets,
+          annotations, and projects stay on your own computer unless you explicitly choose to
+          export or share them. Nothing is uploaded to VermaAgentix servers by default.
+        </p>
+      </div>
+
+      <section id="introduction">
+        <div class="sec-head"><span class="sec-idx">01</span><h2>Introduction</h2></div>
+        <p>
+          This Privacy Policy explains how Label Blend ("the Software"), developed by
+          <strong>VermaAgentix</strong>, collects, uses, stores, and protects information
+          when you use the application. By using Label Blend, you agree to the practices
+          described in this policy.
+        </p>
+      </section>
+
+      <section id="information">
+        <div class="sec-head"><span class="sec-idx">02</span><h2>Information We Collect</h2></div>
+        <p>
+          Label Blend does not require a user account and does not intentionally collect
+          personal information while the software is used offline.
+        </p>
+        <p>Specifically, the application does not collect:</p>
+        <ul class="not-collected">
+          <li>Name</li>
+          <li>Email address</li>
+          <li>Phone number</li>
+          <li>Payment information</li>
+          <li>Location information</li>
+          <li>Biometric information</li>
+          <li>Advertising identifiers</li>
+          <li>Analytics or tracking data</li>
+        </ul>
+      </section>
+
+      <section id="datasets">
+        <div class="sec-head"><span class="sec-idx">03</span><h2>Images &amp; Datasets</h2></div>
+        <p>
+          Label Blend processes images, annotations, datasets, and project files locally
+          on your computer.
+        </p>
+        <ul>
+          <li>Your original images remain yours.</li>
+          <li>Your generated datasets remain yours.</li>
+          <li>Your annotations remain yours.</li>
+          <li>Your exported files remain yours.</li>
+        </ul>
+        <p>
+          Label Blend does not upload your files to VermaAgentix servers unless an optional
+          online feature is explicitly enabled by you.
+        </p>
+      </section>
+
+      <section id="ai">
+        <div class="sec-head"><span class="sec-idx">04</span><h2>AI-Assisted Annotation</h2></div>
+        <p>
+          Label Blend includes AI-assisted features that help generate synthetic datasets and
+          perform annotation assistance, object labeling, image processing, and segmentation.
+          These features are powered in part by
+          <strong>Meta's open-source Segment Anything Model (SAM)</strong>, which runs locally
+          as part of the application to help identify and outline objects in your images.
+        </p>
+        <div class="callout">
+          AI-generated results, including automatically suggested masks and labels, are intended
+          as assistance only. You remain responsible for reviewing and validating generated
+          annotations before relying on them in research, training, or production use.
+        </div>
+      </section>
+
+      <section id="connectivity">
+        <div class="sec-head"><span class="sec-idx">05</span><h2>Internet Connectivity</h2></div>
+        <p>The core functionality of Label Blend, including SAM-based annotation, works completely offline.</p>
+        <p>
+          Any future optional online features will clearly indicate when an internet connection
+          is required before it is used.
+        </p>
+      </section>
+
+      <section id="storage">
+        <div class="sec-head"><span class="sec-idx">06</span><h2>Data Storage</h2></div>
+        <p>
+          Application settings, projects, generated datasets, and annotations are stored locally
+          on your computer.
+        </p>
+        <p>You are responsible for maintaining backups of your own data.</p>
+      </section>
+
+      <section id="third-party">
+        <div class="sec-head"><span class="sec-idx">07</span><h2>Third-Party Components</h2></div>
+        <p>
+          Label Blend uses open-source software libraries and models to provide its functionality,
+          including Meta's Segment Anything Model (SAM). These components are governed by their
+          respective open-source licenses, and their use within Label Blend does not transmit
+          your images or data to any third party.
+        </p>
+      </section>
+
+      <section id="children">
+        <div class="sec-head"><span class="sec-idx">08</span><h2>Children's Privacy</h2></div>
+        <p>
+          Label Blend is intended for developers, researchers, students, educators, and
+          professionals working with computer vision datasets.
+        </p>
+        <p>The application is not specifically intended for children under 13 years of age.</p>
+      </section>
+
+      <section id="security">
+        <div class="sec-head"><span class="sec-idx">09</span><h2>Security</h2></div>
+        <p>
+          Reasonable measures are taken to develop and distribute Label Blend securely. However,
+          no software system can guarantee absolute security.
+        </p>
+      </section>
+
+      <section id="changes">
+        <div class="sec-head"><span class="sec-idx">10</span><h2>Changes to This Policy</h2></div>
+        <p>
+          This Privacy Policy may be updated from time to time. The latest version will always
+          be published on this page.
+        </p>
+      </section>
+
+      <section id="contact">
+        <div class="sec-head"><span class="sec-idx">11</span><h2>Contact</h2></div>
+        <div class="contact-card">
+          <div class="role">Developer</div>
+          <div class="name">VermaAgentix</div>
+          <a href="mailto:vermaagentix@gmail.com">vermaagentix@gmail.com</a>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 VermaAgentix</span>
+        <span>Label Blend — Synthetic Dataset Generation &amp; Annotation Studio</span>
+      </footer>
+
+    </div>
+  </main>
+</div>
+
+<script>
+  // scroll progress bar
+  const progress = document.getElementById('progress');
+  function updateProgress(){
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    progress.style.width = scrolled + '%';
+  }
+  document.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  // active TOC highlighting
+  const sections = document.querySelectorAll('main section[id]');
+  const tocLinks = document.querySelectorAll('.toc a');
+  const linkMap = {};
+  tocLinks.forEach(a => linkMap[a.getAttribute('href').slice(1)] = a);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      if(entry.isIntersecting){
+        tocLinks.forEach(a => a.classList.remove('active'));
+        if(linkMap[id]) linkMap[id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-15% 0px -75% 0px', threshold: 0 });
+
+  sections.forEach(s => observer.observe(s));
+
+  // mobile toc toggle
+  const mobileToggle = document.getElementById('mobileTocToggle');
+  const mobilePanel = document.getElementById('mobileTocPanel');
+  mobileToggle.addEventListener('click', () => {
+    mobileToggle.classList.toggle('open');
+    mobilePanel.classList.toggle('open');
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileToggle.classList.remove('open');
+      mobilePanel.classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
